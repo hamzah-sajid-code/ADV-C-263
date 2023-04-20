@@ -1,0 +1,62 @@
+<html>
+<head>
+    <style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 20px;
+        background-color: lightblue;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    h5 {
+        color: white;
+        background-color: gray;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    input[type="submit"] {
+        background-color: green;
+        color: white;
+        margin: 2px;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: gray;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+    <h1>Advance Calculator!</h1><br>
+    <img width="20%" height="20%" src="{{url_for('static', filename='img.png') }} " />
+    <form method="POST">
+        <label>Enter expression</label><br><br>
+        <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
+            <option>Choose operation</option>
+            <option value="simplify">Simplify</option>
+            <option value="factor">Factor</option>
+        </select>
+        <input placeholder="Expression" name="text">
+        <input type="submit">
+    </form>
+<p>Your equation is {{equation}} = {{ result }}</p>
+
+<footer>
+    <h5>Created By- Hamzah Sajid</h5>
+</footer>
+</body>
+</html>
